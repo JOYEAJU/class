@@ -149,6 +149,57 @@ select * from emp
 select * from emp
     where deptno not in ( 10, 20 );
 
+-- 복습
+select * from emp
+    where job in ('MANAGER', 'SALESMAN', 'CLERK');
+
+select * from emp
+    where job not in ('MANAGER', 'SALESMAN', 'CLERK');
+
+-- 중복제거
+select distinct 
+    JOB from emp;
+
+select
+    EMPNO AS EMPLOYEE_NO,
+    ENAME "EMPLOYEE_NAME"    
+  from emp;
+
+select * from emp
+    where DEPTNO = 30
+  and job = 'SALESMAN';
+
+-- emp 테이블의 모든 열 출력
+select * from emp;
+-- 부서번호가 30인 데이터만 출력
+select * from emp
+    where DEPTNO = 30;
+-- 사원번호가 7782인 데이터만 출력
+select * from emp
+    where EMPNO = 7782;
+-- and 연산자로 여러 개 조건식 사용
+select * from emp
+    where deptno = 30
+  and job = 'SALESMAN';
+-- 사원번호가 7499, 부서번호가 30인 데이터만 출력
+select * from emp
+    where empno = 7499
+  and deptno = 30;
+-- or 연산자로 여러 개의 출력 조건 사용
+select * from emp
+    where deptno = 30
+  or job = 'CLERK';
+-- 부서번호가 20, 직업이 SALESMAN인 데이터만 출력
+select * from emp
+    where deptno = 20
+  or job = 'SALESMAN';
+
+
+
+
+
+
+
 
 
 
